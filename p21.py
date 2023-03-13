@@ -1,0 +1,4 @@
+#program to find the second largest number in a list.
+n = int(input())
+arr = map(int, input().split())
+print(sorted(list(set(arr)))[-2])

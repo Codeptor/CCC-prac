@@ -12,3 +12,4 @@ for i in l:
         min=i
 print("Largest string is: ",max)
 print("Smallest string is: ",min)
+
