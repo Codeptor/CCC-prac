@@ -13,3 +13,5 @@ def armstrong(n):
 for i in range(1,1001):
     if armstrong(i):
         print(i)
+
+

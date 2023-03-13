@@ -1,4 +1,4 @@
-#program to conver Decimal to Binary Numbers 
+#program to convert Decimal to Binary Numbers 
 def dec_to_bin(n):
     if n>1:
         dec_to_bin(n//2)
