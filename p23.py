@@ -1,7 +1,11 @@
-#program to delete duplicates in a given string.
-s=input("Enter a string: ")
-l=[]
-for i in s:
-    if i not in l:
-        l.append(i)
-print("".join(l))
+text="Good Morning"
+
+if text.endswith("ing") and text.startswith("go"):
+    text="Good Afternoon"
+elif not(text.endswith("ing")):
+    text="Good Evening"
+elif not(text.startswith("go")):
+    text="Good Night"
+else:
+    text="Good Day"
+print(text)

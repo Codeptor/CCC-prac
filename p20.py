@@ -3,5 +3,5 @@ import random
 l=[]
 n=(int)(input("Enter no.of elements: "))
 for i in range(n):
-    l.append(random.randint(1,1000))
+    l.append(random.randint(1,1000000))
 print(l)
