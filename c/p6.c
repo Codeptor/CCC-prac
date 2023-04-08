@@ -1,17 +1,21 @@
-#include<stdio.h>
-int main()
-    {
-        float x=1.1;
-        double y=1.1;
-        if(x==1.1)
-        {
-            printf("equal");
-        }
-        else
-        {
-            printf("not equal");
-        }
+#include <stdio.h>
 
-        return 0;
+int main() {
+    int n, i, fact = 1;
+    scanf("%d", &n);
+
+    for (i = 1; i <= n; i++) {
+        fact *= i;
     }
 
+    while (fact > 0) {
+        if (fact % 10 == 1) {
+            printf("no\n");
+            return 0;
+        }
+        fact /= 10;
+    }
+
+    printf("%d\n", fact);
+    return 0;
+}
