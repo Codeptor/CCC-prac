@@ -1,32 +1,24 @@
-//reverse vowels in a string
 #include<stdio.h>
-#include<string.h>
-#include<stdlib.h>
-int main()
-{
-    char *str = (char*) malloc(100 * sizeof(char));
-    scanf("%s", str);
-    int i, j, len = strlen(str);
-    for(i = 0, j = len - 1; i < j; i++, j--)
+
+int main() {
+    char s[100000],a[100000];
+    scanf("%s",s);
+    int i,k=0,st[100001];
+    for(i=0;s[i]!='\0';i++)
     {
-        if(str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u' || str[i] == 'A' || str[i] == 'E' || str[i] == 'I' || str[i] == 'O' || str[i] == 'U')
-        {
-            if(str[j] == 'a' || str[j] == 'e' || str[j] == 'i' || str[j] == 'o' || str[j] == 'u' || str[j] == 'A' || str[j] == 'E' || str[j] == 'I' || str[j] == 'O' || str[j] == 'U')
-            {
-                char temp = str[i];
-                str[i] = str[j];
-                str[j] = temp;
-            }
-            else
-            {
-                j++;
-            }
-        }
-        else
-        {
-            i--;
-        }
+       if(s[i]=='a' || s[i]=='e' || s[i]=='i' || s[i]=='o' || s[i]=='u' || s[i]=='A' || s[i]=='E'||                   s[i]=='I' || s[i]=='O' || s[i]=='U')
+       {
+           st[k]=i;
+           a[k]=s[i];
+           k++;
+       }            
     }
-    printf("%s", str);
+    int end=k-1;
+    for(i=0;i<k;i++)
+    {
+        s[st[i]]=a[end];
+        end--;
+    }
+    printf("%s",s);
     return 0;
 }
