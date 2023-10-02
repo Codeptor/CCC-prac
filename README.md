@@ -1,2 +1,2 @@
 # CCC-prac
-CCC training DSA practice 
+DSA practice 
